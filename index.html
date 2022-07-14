@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROJECT3</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+        :root {
+            --primary: #1cb495;
+        }
+
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/images/bg03.jpg") center / cover;
+            padding: 0 10%;
+            font-family: "Roboto", sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        form .input {
+            margin: .5em 0;
+            width: 100%;
+            min-height: 2rem;
+            padding: 1em;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: transparent;
+            outline: none;
+            color: #fff;
+            border-radius: 5px;
+            font-family: inherit;
+            font-weight: 500;
+        }
+
+        form .submit {
+            cursor: pointer;
+            background: var(--primary);
+            border: none;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+        }
+
+        footer .top .social {
+            display: flex;
+            list-style: none;
+        }
+
+        footer .top .social li {
+            margin-left: 1em;
+        }
+
+        footer .top .social li:first-child {
+            margin-left: 0;
+        }
+
+        footer .top .social li a {
+            color: #fff;
+            opacity: .5;
+        }
+
+        footer .bottom {
+            color: #fff;
+            opacity: .5;
+            font-size: .8rem;
+            padding: 1rem 0 2rem 0;
+        }
+
+        .dotted {
+            border-bottom: 1px dashed #ffffff70;
+        }
+
+        .btm-text {
+            margin-top: 1em;
+            color: var(--primary);
+        }
+
+        @media (max-width: 600px) {
+            .intro {
+                display: none;
+            }
+        }
+
+        @media (min-width: 600px) {
+            body {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .intro {
+                margin-bottom: 1em;
+            }
+
+            .intro .title {
+                color: #fff;
+                margin-bottom: .5em;
+            }
+
+            .intro .text {
+                color: #fff;
+                opacity: .5;
+            }
+
+            form {
+                width: auto;
+                flex-direction: row;
+            }
+
+            form .submit {
+                width: auto;
+                margin-left: 1em;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="intro">
+        <h1 class="title">Eventually</h1>
+        <p class="text">A simple template for telling when you'll launch your next big thing. Brought to you but <span class="dotted">HTML5 UP</span></p>
+    </div>
+
+    <form action="#" method="post" class="form">
+
+        <input type="email" name="email" id="email" class="input" placeholder="Email Address:">
+        <input type="button" value="Sign Up" class="input submit">
+        <p class="btm-text"></p>
+
+    </form>
+
+    <footer class="footer">
+
+        <div class="top">
+            <ul class="social">
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                <li><a href="#"><i class="far fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <p>&copy; Untitled. | &nbsp;Credits: <span class="dotted">UNSPLASH</span> + <span class="dotted">GOOGLEFONTS</span></p>
+        </div>
+
+    </footer>
+    
+    <script>
+
+        const btmText = document.querySelector(".btm-text");
+        const subBtn = document.querySelector(".submit");
+        
+        subBtn.addEventListener("click", () => {
+            btmText.innerHTML = `<i class="far fa-check-circle"></i> Thanks!`;
+        })
+
+    </script>
+
+</body>
+
+</html>
